@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "locomotive-scroll/dist/locomotive-scroll.css";
+@import url("../fonts/stylesheet.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  font-family: "Averta CY W10 Light";
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+.hero-title {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+/* .cursor {
+  position: fixed;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+} */
+/* .cursor.active {
+  opacity: 1;
+  transform: scale(0);
+} */
+/* .cursor.hovered {
+  opacity: 1;
+} */
+/* .cursor.menu-active {
+  opacity: 1;
+  transform: scale(0);
+} */
+/* .cursor-follower {
+  position: fixed;
+  border:1px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background-color;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+} */
+/* .cursor-follower.active {
+  opacity: 1;
+  transform: scale(2);
+} */
+/* .cursor-follower.hovered {
+  opacity: 1;
+} */
+/* .cursor-follower.menu-active {
+  opacity: 1;
+  transform: scale(2);
+} */
+
+/* .cursor-follower.active.hamburgerMenu, .cursor-follower.hovered.hamburgerMenu {
+  background-color: #00f7ff;
+  transition: background-color 0.6s ease-in-out;
+}
+ */
+
+ .ball {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 2px solid #000;
+  border-radius: 50%;
+  pointer-events: none;
+}
+

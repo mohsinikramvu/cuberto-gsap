@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Averta CY W10 Light';
+    src: url('AvertaCYW10-Light.woff2') format('woff2'),
+        url('AvertaCYW10-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta CY W10 Semibold';
+    src: url('AvertaCYW10-Semibold.woff2') format('woff2'),
+        url('AvertaCYW10-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta CY W10 Regular';
+    src: url('AvertaCYW10-Regular.woff2') format('woff2'),
+        url('AvertaCYW10-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
