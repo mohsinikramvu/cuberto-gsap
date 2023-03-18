@@ -34,6 +34,7 @@ export default function Home() {
       const textChars = detailTextSplitType.chars;
       // ball scroll animation
       gsap.set(ball.current, { xPercent: -50, yPercent: -50, zIndex: 99999 });
+      // gsap.to(ball.current, 3, {rotation:"360", ease: 'Linear.easeNone', repeat:1});
       const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
       const mouse = { x: pos.x, y: pos.y };
       const speed = 0.2;
@@ -116,13 +117,22 @@ export default function Home() {
       }
       const innerTitleWord = document.querySelectorAll("span.inner-title-word .word");
       innerTitleWord.forEach((item, index) => {
-        wordAnimation(item);
+        wordAnimation(item, index);
       });
     }
   });
 
-  const wordAnimation = (item: HTMLElement | any) => {
+  const wordAnimation = (item: HTMLElement | any, index: number) => {
+    let imgUrl = '';
+    if (index === 0) {
+      imgUrl = '/images/kelly-sikkema-YXWoEn5uOvg-unsplash-1.jpg'
+    } else if (index === 1) {
+      imgUrl = '/images/usgs-kHxFj8DN0go-unsplash-1.jpg'
+    } else if (index === 2) {
+      imgUrl = '/images/eiraj-f-PJgZa1IR8o0-unsplash-1.jpg'
+    }
     $(item).on("mouseenter", function () {
+      gsap.timeline().fromTo(ball.current, { rotation: 0 }, { rotation: 360, duration: 5, repeat: -1, ease: "linear" }, 0);
       gsap.to(ball.current, {
         duration: 1,
         ease: "linear",
@@ -214,7 +224,7 @@ export default function Home() {
                 <span className="inner-title-word" ref={innerTitleWordApp}>
                   Apps
                 </span>{" "}
-                <span className="inner-title-word">Branding</span>
+                <span className="inner-title-word" ref={innerTitleWordWeb}>Branding</span>
               </p>
             </div>
             <div className="bottom-text overflow-hidden">
@@ -222,8 +232,8 @@ export default function Home() {
                 className="detail-text reveal-animate text-4xl text-black overflow-hidden"
                 ref={detailText}
               >
-                Leading digital agency with solid design and development
-                expertise. We build readymade websites, mobile applications, and
+                Leading digital agency with solid design and development<br />
+                expertise. We build readymade websites, mobile applications, and<br />
                 elaborate online business services.
               </p>
             </div>
